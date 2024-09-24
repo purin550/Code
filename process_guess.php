@@ -28,11 +28,12 @@ if (isset($_POST['submit'])) {
     // Update the session with the new number of guesses
     $_SESSION['guesses'] = $guesses;
 }
-if (isset($_POST['give up'])){
-        $message = " The correct number is $target_number ";
-        session_unset(); // Unset all session variables
-        session_destroy(); // Destroy the session
-}        
+if (isset($_POST['give_up'])) {
+    $message = "The correct number is $target_number";
+     session_unset(); 
+    session_destroy(); 
+
+}
 
 // Return the message to be displayed
 if (isset($message)) {
